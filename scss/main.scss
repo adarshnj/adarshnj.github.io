@@ -67,7 +67,7 @@ main {
 
   &#home {
     overflow: hidden;
-    h1 {
+    #home-name {
       margin-top: 20vh;
     }
   }
@@ -76,7 +76,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio " "job1 job1 job1";
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
@@ -84,6 +84,11 @@ main {
     margin: auto;
     border-radius: 50%;
     border: $secondary-color 3px solid;
+  }
+
+  .bio {
+    grid-area: bio;
+    margin: auto;
   }
 
   .job-1 {
@@ -165,14 +170,13 @@ main {
 
 .main-footer {
   // position: absolute;
-  display: none;
   bottom: 0px;
   width: 100%;
   text-align: center;
   padding: 1rem;
   background: darken($color: $primary-color, $amount: 10);
   color: set-text-color($primary-color);
-  height: 40px;
+  height: 60px;
 }
 
 @import "mobile";

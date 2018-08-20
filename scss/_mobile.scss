@@ -52,8 +52,8 @@
   .about-info {
     grid-template-areas:
       "bioimage"
-      "bio"
-      "job1";
+      "bio bio"
+      "job1 job1 job1";
   }
 
   .projects {

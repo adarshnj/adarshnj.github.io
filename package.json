@@ -5,13 +5,14 @@
   "main": "index.js",
   "homepage": "https://adarshnj.github.io/home",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "sass": "node-sass -w scss/ -o gh-pages/css/ --recursive",
     "deploy": "gh-pages -d dist"
   },
   "author": "Adarsh NJ",
   "license": "ISC",
   "dependencies": {
     "gh-pages": "^1.2.0",
+    "mysql": "^2.16.0",
     "node-sass": "^4.9.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2"

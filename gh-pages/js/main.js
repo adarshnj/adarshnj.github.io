@@ -3,6 +3,8 @@ const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
 const menuNav = document.querySelector(".menu-nav");
 const menuBranding = document.querySelector(".menu-branding");
+const portrait = document.querySelector(".portrait");
+const home = document.querySelector("#home-name");
 
 const navItems = document.querySelectorAll(".nav-item");
 
@@ -11,9 +13,11 @@ const navItems = document.querySelectorAll(".nav-item");
 let showMenu = false;
 
 menuBtn.addEventListener("click", toggleMenu);
+portrait.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
   if (!showMenu) {
+    // if (home) home.style.marginTop = "10px";
     menuBtn.classList.add("close");
     menu.classList.add("show");
     menuNav.classList.add("show");
@@ -23,6 +27,7 @@ function toggleMenu() {
     //Set menu state
     showMenu = true;
   } else {
+    // if (home) home.style.marginTop = "0vh";
     menuBtn.classList.remove("close");
     menu.classList.remove("show");
     menuNav.classList.remove("show");

@@ -24,7 +24,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -41,14 +40,14 @@
     margin: 0;
     padding: 0;
     background: #373737;
+    opacity: 0.9;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    opacity: 1;
-    background: #444;
+    background: rgba(68, 68, 68, 0.9);
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -103,6 +102,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
+    background: url(../img/1534.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -155,19 +155,22 @@ main {
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
-    main#home h1 {
+    main#home #home-name {
       margin-top: 20vh; }
 
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio " "job1 job1 job1";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
     border: #eece1a 3px solid; }
+  .about-info .bio {
+    grid-area: bio;
+    margin: auto; }
   .about-info .job-1 {
     grid-area: job1;
     background: #515151;
@@ -222,14 +225,13 @@ main {
   color: #333; }
 
 .main-footer {
-  display: none;
   bottom: 0px;
   width: 100%;
   text-align: center;
   padding: 1rem;
   background: #2b2b2b;
   color: white;
-  height: 40px; }
+  height: 60px; }
 
 @media screen and (min-width: 1171px) {
   .projects {
@@ -264,7 +266,7 @@ main {
     .menu-branding .portrait {
       background-size: cover; }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1"; }
+    grid-template-areas: "bioimage" "bio bio" "job1 job1 job1"; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
