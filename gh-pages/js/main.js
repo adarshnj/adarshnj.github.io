@@ -15,12 +15,7 @@ let showMenu = false;
 
 menuBtn.addEventListener("click", toggleMenu);
 portrait.addEventListener("click", toggleMenu);
-navItems.forEach(
-  item =>
-    (item.onclick = function() {
-      toggleMenu();
-    })
-);
+navItems.forEach(item => (item.onclick = toggleMenu));
 
 function toggleMenu() {
   if (!showMenu) {
