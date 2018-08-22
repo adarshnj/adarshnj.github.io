@@ -17,7 +17,17 @@ menuBtn.addEventListener("click", toggleMenu);
 portrait.addEventListener("click", toggleMenu);
 navItems.forEach(item => (item.onclick = toggleMenu));
 
-function toggleMenu() {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+});
+
+function toggleMenu(ele) {
   if (!showMenu) {
     // if (home) home.style.marginTop = "10px";
     menuBtn.classList.add("close");
