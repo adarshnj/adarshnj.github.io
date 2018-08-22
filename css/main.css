@@ -347,3 +347,9 @@ main .about-info .job-1 {
     grid-template-columns: 1fr;
   }
 }
+.proj {
+  list-style: none;
+}
+.proj p {
+  padding-left: 2vw;
+}
