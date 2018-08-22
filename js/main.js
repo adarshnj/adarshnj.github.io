@@ -5,8 +5,9 @@ const menuNav = document.querySelector(".menu-nav");
 const menuBranding = document.querySelector(".menu-branding");
 const portrait = document.querySelector(".portrait");
 const home = document.querySelector("#home-name");
-
 const navItems = document.querySelectorAll(".nav-item");
+
+// document.querySelector(".nav-item").addEventListener("click", toggleMenu());
 
 // Set initial state (open or close)
 
@@ -14,6 +15,7 @@ let showMenu = false;
 
 menuBtn.addEventListener("click", toggleMenu);
 portrait.addEventListener("click", toggleMenu);
+navItems.forEach(item => (item.onclick = toggleMenu));
 
 function toggleMenu() {
   if (!showMenu) {
